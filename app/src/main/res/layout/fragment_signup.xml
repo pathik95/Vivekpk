@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_firstName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:hint="First Name"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#797979" />
+
+        <EditText
+            android:id="@+id/et_lasttName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="Last Name"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#797979" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_emailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Email ID"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#797979" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:drawableRight="@drawable/ic_action_arrow"
+            android:hint="+91"
+            android:singleLine="true"
+            android:textColorHint="#797979" />
+
+
+        <EditText
+            android:id="@+id/et_contactNo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:hint="Number"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textColorHint="#797979" />
+    </LinearLayout>
+
+    <com.maksim88.passwordedittext.PasswordEditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textColorHint="#797979"
+        app:pet_hoverShowsPw="true"
+        app:pet_nonMonospaceFont="true" />
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorPrimary"
+        android:text="Continue" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="By signing in you agree to our terms and condition."
+        android:textColor="#797979"
+        android:textSize="12sp" />
+
+</LinearLayout>
