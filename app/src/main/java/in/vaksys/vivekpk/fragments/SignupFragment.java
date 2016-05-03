@@ -2,16 +2,20 @@ package in.vaksys.vivekpk.fragments;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -23,15 +27,17 @@ import java.util.List;
 import java.util.Locale;
 
 import in.vaksys.vivekpk.R;
+import in.vaksys.vivekpk.activities.VerifyOtpActivity;
 import in.vaksys.vivekpk.adapter.CountryCodeAdapter;
 import in.vaksys.vivekpk.pojo.Country;
 
 /**
  * Created by dell980 on 5/2/2016.
  */
-public class SignupFragment extends Fragment implements View.OnClickListener {
+public class SignupFragment extends Fragment {
 
     EditText etCountryCode;
+    private Button btnContinue;
     private String[] code = {"(+36)", "(+354)", "(+91)", "(+62)", "(+62)",
             "(+98)", "(+98)", "(+964)"};
 
@@ -52,15 +58,39 @@ public class SignupFragment extends Fragment implements View.OnClickListener {
 
         etCountryCode = (EditText) rootView.findViewById(R.id.et_code);
 
-        etCountryCode.setOnClickListener(this);
+        btnContinue = (Button) rootView.findViewById(R.id.btn_continue);
+
+        etCountryCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ShowAlertDialogWithListview();
+            }
+        });
+
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog confirm = new Dialog(getActivity());
+                confirm.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                confirm.setContentView(R.layout.confirm_dialog);
+
+
+                Button btnSend = (Button) confirm.findViewById(R.id.btn_send);
+
+                btnSend.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(getActivity(), VerifyOtpActivity.class));
+                    }
+                });
+
+                confirm.show();
+            }
+        });
 
         return rootView;
     }
 
-    @Override
-    public void onClick(View v) {
-        ShowAlertDialogWithListview();
-    }
 
     public void ShowAlertDialogWithListview() {
         dialog = new Dialog(getActivity());
