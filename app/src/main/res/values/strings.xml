@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Vivekpk</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="home">Home</string>
+    <string name="reminder">Reminder</string>
+    <string name="documents">Documents</string>
+    <string name="emergency_contact">Emergency  Contact</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
