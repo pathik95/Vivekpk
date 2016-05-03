@@ -18,10 +18,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="EditeTextBottom" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--<style name="EditeTextBottom" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorControlNormal">#797979</item>
         <item name="colorControlActivated">#797979</item>
         <item name="colorControlHighlight">#797979</item>
-    </style>
+    </style>-->
 
 </resources>

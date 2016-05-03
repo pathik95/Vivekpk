@@ -8,7 +8,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,31 +20,49 @@ import in.vaksys.vivekpk.R;
 import in.vaksys.vivekpk.fragments.SigninFragment;
 import in.vaksys.vivekpk.fragments.SignupFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TabLayout tabLayout;
+    private LinearLayout linearLayout1, linearLayout2, linearLayout3;
+    private CheckBox checkBox;
+   /* private TabLayout tabLayout;
     private ViewPager viewPager;
-    final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+    final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (Build.VERSION.SDK_INT < 16) {
+        /*if (Build.VERSION.SDK_INT < 16) {
             getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        }
-        setContentView(R.layout.activity_main);
+        }*/
+        setContentView(R.layout.remind_me);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        linearLayout1 = (LinearLayout) findViewById(R.id.linerFiveDay);
+        linearLayout2 = (LinearLayout) findViewById(R.id.linerOneFiveDay);
+        linearLayout3 = (LinearLayout) findViewById(R.id.linerTwoFiveDay);
+
+        linearLayout1.setOnClickListener(this);
+        linearLayout2.setOnClickListener(this);
+        linearLayout3.setOnClickListener(this);
+
+
+       /* viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
         tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);*/
 
     }
 
-    private void setupViewPager(ViewPager viewPager) {
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+           
+        }
+    }
+
+   /* private void setupViewPager(ViewPager viewPager) {
 
         adapter.addFragment(new SigninFragment(), "Sign In");
         adapter.addFragment(new SignupFragment(), "Sign Up");
@@ -75,5 +96,5 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
-    }
+    }*/
 }
