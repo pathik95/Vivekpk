@@ -15,7 +15,7 @@ import in.vaksys.vivekpk.adapter.ViewPagerAdapter;
 /**
  * Created by Harsh on 03-05-2016.
  */
-public class DemoFragment extends Fragment {
+public class MainTabFragment extends Fragment {
 
     //    @BindView(R.id.tabs1)
     TabLayout tabLayout;
@@ -26,8 +26,8 @@ public class DemoFragment extends Fragment {
     /**
      * Create a new instance of the fragment
      */
-    public static DemoFragment newInstance(int index) {
-        DemoFragment fragment = new DemoFragment();
+    public static MainTabFragment newInstance(int index) {
+        MainTabFragment fragment = new MainTabFragment();
         Bundle b = new Bundle();
         b.putInt("index", index);
         fragment.setArguments(b);
@@ -36,7 +36,7 @@ public class DemoFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_demo_settings, container, false);
+        View view = inflater.inflate(R.layout.fragment_main_tabs, container, false);
 //        ButterKnife.bind(this, view);
 
         tabLayout = (TabLayout) view.findViewById(R.id.tabs1);
@@ -46,7 +46,7 @@ public class DemoFragment extends Fragment {
 
         return view;
        /* if (getArguments().getInt("index", -1) == 0) {
-            View view = inflater.inflate(R.layout.fragment_demo_settings, container, false);
+            View view = inflater.inflate(R.layout.fragment_main_tabs, container, false);
             initDemoSettings(view);
             return view;
         } else {

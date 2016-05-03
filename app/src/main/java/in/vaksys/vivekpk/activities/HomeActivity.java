@@ -13,11 +13,11 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import java.util.ArrayList;
 
 import in.vaksys.vivekpk.R;
-import in.vaksys.vivekpk.fragments.DemoFragment;
+import in.vaksys.vivekpk.fragments.MainTabFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private DemoFragment currentFragment;
+    private MainTabFragment currentFragment;
     private ArrayList<AHBottomNavigationItem> bottomNavigationItems = new ArrayList<>();
     private FragmentManager fragmentManager;
     private AHBottomNavigation bottomNavigation;
@@ -68,7 +68,7 @@ public class HomeActivity extends AppCompatActivity {
                 }
 
                 if (!wasSelected) {
-                    currentFragment = DemoFragment.newInstance(position);
+                    currentFragment = MainTabFragment.newInstance(position);
                     fragmentManager.beginTransaction()
                             .replace(R.id.fragment_container, currentFragment)
                             .commit();
@@ -78,7 +78,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        currentFragment = DemoFragment.newInstance(0);
+        currentFragment = MainTabFragment.newInstance(0);
         fragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, currentFragment)
                 .commit();
