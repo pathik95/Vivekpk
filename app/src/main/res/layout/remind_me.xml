@@ -49,6 +49,7 @@
                 android:textSize="14sp" />
 
             <CheckBox
+                android:id="@+id/checkbox1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -79,6 +80,7 @@
                 android:textSize="14sp" />
 
             <CheckBox
+                android:id="@+id/checkbox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -109,6 +111,7 @@
                 android:textSize="14sp" />
 
             <CheckBox
+                android:id="@+id/checkbox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

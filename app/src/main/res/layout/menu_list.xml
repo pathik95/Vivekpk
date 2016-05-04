@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_window"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right|end"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="15dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/myAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_arrow"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:padding="3dp"
+        android:text="My Account"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_arrow"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="News"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/inviteFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_arrow"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="Invite Friend"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/rateTheApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_arrow"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="Rate The App"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/helpCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_arrow"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="Help Center"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/referralCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_arrow"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="Referral Code"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>
