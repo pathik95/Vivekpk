@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:gravity="left||center"
+            android:gravity="left|center"
             android:orientation="vertical">
 
             <TextView
@@ -34,7 +34,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:gravity="left||center"
+            android:gravity="left|center"
             android:orientation="vertical">
 
             <TextView
@@ -50,7 +50,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:gravity="left||center"
+            android:gravity="left|center"
             android:orientation="vertical">
         <TextView
             android:id="@+id/inviteFriends"
@@ -65,7 +65,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:gravity="left||center"
+                android:gravity="left|center"
                 android:orientation="vertical">
         <TextView
             android:id="@+id/rateTheApp"
@@ -80,7 +80,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:gravity="left||center"
+                    android:gravity="left|center"
                     android:orientation="vertical">
         <TextView
             android:id="@+id/helpCenter"
@@ -95,7 +95,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="48dp"
-                        android:gravity="left||center"
+                        android:gravity="left|center"
                         android:orientation="vertical">
         <TextView
             android:id="@+id/referralCode"

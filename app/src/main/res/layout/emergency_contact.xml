@@ -197,9 +197,9 @@
                         android:id="@+id/linear_contactTwo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="60dp"
                         android:orientation="horizontal"
-                        android:visibility="gone">
+                        android:visibility="visible">
 
                         <ImageView
                             android:layout_width="0dp"

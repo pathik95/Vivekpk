@@ -4,8 +4,11 @@
     <string name="home">Home</string>
     <string name="reminder">Reminder</string>
     <string name="documents">Documents</string>
-    <string name="emergency_contact">Emergency  Contact</string>
+    <string name="emergency_contact">Emergency</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="copyright_text">Daddys road respects the intellectual property rights of others and expects its users to do the same.\n\nIt is daddysroad policy in appropriate circumstances and at its discreation to disable and or terminate the accounts of users who repetedly infinge or are repeatedly charged with infinging the copyrights or other intellectual property rights of other.
+    </string>
+    <string name="password_reset_info">To reset your password, visit the link below and enter your email address or mobile number.\n\nWithin a few minutes, you should receive an email inviting you to reset your password.\n\nFor security reasons, you should choose a unique password for daddysroad and never share your password in any correnspondence.\n\nIf you continue to have trouble accessing your account, please <b>write to us</b>\n</string>
 </resources>

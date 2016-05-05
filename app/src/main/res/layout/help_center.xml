@@ -2,52 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:background="#ECE9E8"
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reasons For Contacting"
-        android:textColor="#7B7A76"
-        android:textSize="14sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Help Center"
+        android:textColor="#000000"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="#F8F8F8">
+        android:background="#ffffff">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/wrongparking" />
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="Wrong Parking Ticket"
+                    android:text="About Us"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -66,27 +62,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/carunlock" />
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="Traffic signal jumping"
+                    android:text="Help"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -105,27 +94,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/threat" />
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="Seat belt / drunk &amp; Drive"
+                    android:text="Legal"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -144,66 +126,20 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/towed" />
 
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="Tow Away"
+                    android:text="Contact Us"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/right_arrow_for_menu" />
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#CCC" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/emergency_contact" />
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="4"
-                    android:text="Report Accident ( To drivers contact )"
-                    android:textColor="#7F7F7F"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:layout_width="0dp"

@@ -58,12 +58,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_arrow" />
+                        android:src="@drawable/rc_book" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         android:text="Rc Book"
                         android:textColor="#CCC"
                         android:textSize="12sp"
@@ -81,12 +82,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_arrow" />
+                        android:src="@drawable/insurance" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         android:text="Insurance"
                         android:textColor="#CCC"
                         android:textSize="12sp"
@@ -104,12 +106,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_arrow" />
+                        android:src="@drawable/emission_select" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         android:text="Emission"
                         android:textColor="#CCC"
                         android:textSize="12sp"
@@ -127,12 +130,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_action_arrow" />
+                        android:src="@drawable/bills_select" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="20dp"
                         android:text="Rc Bills"
                         android:textColor="#CCC"
                         android:textSize="12sp"

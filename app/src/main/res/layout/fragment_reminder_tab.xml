@@ -7,20 +7,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:paddingRight="4dp"
-        android:paddingLeft="4dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="3dp"
         android:layout_marginRight="3dp"
-        android:paddingBottom="2dp"
         android:layout_marginTop="5dp"
-        android:layout_height="wrap_content"
         android:background="@drawable/ractangle_border"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
 
         <android.support.design.widget.TabLayout
-            android:id="@+id/tabs1"
+            android:id="@+id/tabs2"
+            style="@style/MyCustomTabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="96dp"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/colorPrimary"
             app:tabIndicatorHeight="2dp"
@@ -32,7 +33,7 @@
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager1"
+        android:id="@+id/viewpager2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"

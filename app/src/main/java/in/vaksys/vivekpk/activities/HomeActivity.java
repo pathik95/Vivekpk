@@ -14,10 +14,14 @@ import java.util.ArrayList;
 
 import in.vaksys.vivekpk.R;
 import in.vaksys.vivekpk.fragments.MainTabFragment;
+import in.vaksys.vivekpk.fragments.ReminderTabFragment;
+import in.vaksys.vivekpk.fragments.DocumentFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
     private MainTabFragment currentFragment;
+    private DocumentFragment documentFragment;
+    private ReminderTabFragment reminderTabFragment;
     private ArrayList<AHBottomNavigationItem> bottomNavigationItems = new ArrayList<>();
     private FragmentManager fragmentManager;
     private AHBottomNavigation bottomNavigation;
@@ -40,15 +44,15 @@ public class HomeActivity extends AppCompatActivity {
 //        floatingActionButton = (FloatingActionButton) findViewById(R.id.floating_action_button);
         bottomNavigation.setDefaultBackgroundColor(Color.parseColor("#F6B332"));
         AHBottomNavigationItem item = new AHBottomNavigationItem(R.string.home, R.drawable.ic_action_verify, R.color.color_tab_1);
-        AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.reminder, R.drawable.ic_action_verify, R.color.color_tab_1);
-        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.documents, R.drawable.ic_action_verify, R.color.color_tab_1);
-        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.emergency_contact, R.drawable.ic_action_verify, R.color.color_tab_1);
+        AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.reminder, R.drawable.reminder_can_we_help, R.color.color_tab_1);
+        AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.documents, R.drawable.settings_documents, R.color.color_tab_1);
+        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.emergency_contact, R.drawable.emergency_contac_activet_tab, R.color.color_tab_1);
 
         bottomNavigationItems.add(item);
         bottomNavigationItems.add(item1);
         bottomNavigationItems.add(item2);
         bottomNavigationItems.add(item3);
-//        bottomNavigation.setForceTitlesDisplay(true);
+        bottomNavigation.setForceTitlesDisplay(true);
 //        bottomNavigation.setColored(true);
 
         bottomNavigation.addItems(bottomNavigationItems);
@@ -61,27 +65,45 @@ public class HomeActivity extends AppCompatActivity {
         bottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position, boolean wasSelected) {
-                Toast.makeText(HomeActivity.this, " " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, " " + position + " " + wasSelected, Toast.LENGTH_SHORT).show();
+                if (position == 0) {
+                    currentFragment = MainTabFragment.newInstance(0);
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, currentFragment)
+                            .commit();
+                }
                 if (position == 1) {
-                    bottomNavigation.setNotification(0, 1);
-
+//                    bottomNavigation.setNotification(0, 1);
+                    reminderTabFragment = ReminderTabFragment.newInstance(0);
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, reminderTabFragment)
+                            .commit();
+                }
+                if (position == 2) {
+                    documentFragment = documentFragment.newInstance(0);
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, documentFragment)
+                            .commit();
+                }
+                if (position == 3) {
+                    reminderTabFragment = ReminderTabFragment.newInstance(0);
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.fragment_container, reminderTabFragment)
+                            .commit();
                 }
 
-                if (!wasSelected) {
+               /* if (!wasSelected) {
                     currentFragment = MainTabFragment.newInstance(position);
                     fragmentManager.beginTransaction()
                             .replace(R.id.fragment_container, currentFragment)
                             .commit();
                 } else if (position > 0) {
 //                    currentFragment.refresh();
-                }
+                }*/
             }
         });
 
-        currentFragment = MainTabFragment.newInstance(0);
-        fragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, currentFragment)
-                .commit();
+
 
        /* final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
