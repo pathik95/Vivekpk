@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:orientation="vertical">
 
@@ -23,13 +23,13 @@
                 android:layout_height="wrap_content"
                 android:text="Add Vehicle Details"
                 android:textColor="#83837F"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="12sp"
                 android:text="Add start adding reminders" />
 
             <Button

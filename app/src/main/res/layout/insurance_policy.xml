@@ -14,19 +14,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:padding="8dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Insurance Policy"
                 android:textColor="#83837F"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -34,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_action_arrow" />
+                    android:src="@drawable/insurance_policy" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -58,24 +59,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:text="Expiry Date"
                 android:textColor="#83837F"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:layout_marginTop="10dp"
+                android:layout_gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_action_arrow" />
+                    android:src="@drawable/calendar" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -102,14 +103,15 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="6dp"
                 android:orientation="horizontal">
 
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="8dp"
                     android:layout_weight="1"
                     android:background="#C2BCBF"
                     android:text="cancel" />
@@ -117,7 +119,7 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimary"
                     android:text="set alert" />
