@@ -59,9 +59,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
                         android:text="Register Number"
                         android:textColor="#C6C4C5"
-                        android:layout_marginBottom="8dp"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -69,10 +69,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="12sp"
                         android:layout_marginBottom="8dp"
                         android:text="KA-05j-95959"
-                        android:textColor="#83837F" />
+                        android:textColor="#83837F"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -92,8 +92,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginBottom="8dp"
                         android:text="Make"
-                        android:layout_marginBottom="8dp"
                         android:textColor="#C6C4C5"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -102,10 +102,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Jaguar"
                         android:layout_marginBottom="8dp"
-                        android:textSize="12sp"
-                        android:textColor="#83837F" />
+                        android:text="Jaguar"
+                        android:textColor="#83837F"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -125,8 +125,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Model"
                         android:layout_marginBottom="8dp"
+                        android:text="Model"
                         android:textColor="#C6C4C5"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -135,10 +135,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:textSize="12sp"
                         android:layout_marginBottom="8dp"
                         android:text="Sedan"
-                        android:textColor="#83837F" />
+                        android:textColor="#83837F"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -164,8 +164,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -185,8 +185,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Rc Book"
                         android:layout_marginTop="6dp"
+                        android:text="Rc Book"
                         android:textColor="#CCC"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -209,9 +209,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
                         android:text="Insurance"
                         android:textColor="#CCC"
-                        android:layout_marginTop="6dp"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -233,10 +233,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
                         android:text="Emission"
                         android:textColor="#CCC"
                         android:textSize="12sp"
-                        android:layout_marginTop="6dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -257,12 +257,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="6dp"
                         android:text="Bills"
                         android:textColor="#CCC"
-                        android:layout_marginTop="6dp"
                         android:textSize="12sp"
                         android:textStyle="bold" />
-
                 </LinearLayout>
             </LinearLayout>
 
