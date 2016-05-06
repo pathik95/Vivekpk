@@ -33,6 +33,7 @@
                 android:text="Add start adding reminders" />
 
             <Button
+                android:id="@+id/btn_addVehicle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"

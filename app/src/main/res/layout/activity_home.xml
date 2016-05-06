@@ -13,7 +13,7 @@
 
         <include
             android:id="@+id/toolbar1"
-            layout="@layout/toolbar" />
+            layout="@layout/custome_toolbar" />
 
         <FrameLayout
             android:id="@+id/fragment_container"

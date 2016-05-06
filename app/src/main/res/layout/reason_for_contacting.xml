@@ -25,6 +25,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/linear_worngParking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -64,6 +65,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_trafficSignal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -103,6 +105,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_seatBelt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -142,6 +145,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_towAway"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -181,6 +185,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_reportAccident"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"

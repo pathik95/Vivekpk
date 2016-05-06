@@ -19,22 +19,22 @@
             android:layout_height="wrap_content"
             android:text="Claiming this vehicle"
             android:textColor="#797979"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_phoneNo"
+            android:id="@+id/tv_claimNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="1234567890"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/tv_countryName"
+            android:id="@+id/tv_claimCarModel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -59,7 +59,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/et_edit"
+            android:id="@+id/et_cancel"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -74,7 +74,7 @@
             android:background="#929091" />
 
         <Button
-            android:id="@+id/btn_send"
+            android:id="@+id/btn_claim"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

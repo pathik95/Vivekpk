@@ -183,6 +183,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -192,6 +193,7 @@
                 android:textColor="@color/colorPrimary" />
 
             <Button
+                android:id="@+id/btn_save"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -209,6 +211,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btn_logout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -219,6 +222,7 @@
                 android:textColor="#999799" />
 
             <Button
+                android:id="@+id/btn_deactiveAccount"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

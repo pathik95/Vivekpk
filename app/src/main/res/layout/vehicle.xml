@@ -32,10 +32,11 @@
                     android:layout_weight="1"
                     android:text="Vehicle Details"
                     android:textColor="#83837F"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/img_vehicelDetailEdit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|right"
@@ -66,6 +67,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_detailvehicleNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -97,6 +99,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_detailvehicleBrand"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -128,6 +131,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_detailvehicleNumberModel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

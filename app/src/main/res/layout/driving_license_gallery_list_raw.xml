@@ -6,6 +6,7 @@
     android:padding="10dp">
 
     <ImageView
+        android:id="@+id/img_galleryImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/splashscreen" />
@@ -17,6 +18,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/tv_imageName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Photo 1"
@@ -38,6 +40,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_replace"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -55,6 +58,7 @@
                 android:src="@drawable/gallery_replace_icon" />
 
             <TextView
+                android:id="@+id/tv_delete"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

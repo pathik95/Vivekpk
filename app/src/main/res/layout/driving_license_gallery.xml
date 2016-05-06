@@ -12,6 +12,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/img_cancelGallery"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -28,6 +29,7 @@
             android:textStyle="bold" />
 
         <ImageView
+            android:id="@+id/img_addToGallery"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

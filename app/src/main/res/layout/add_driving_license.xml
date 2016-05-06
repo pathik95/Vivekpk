@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:text="Add Driving License"
                 android:textColor="#83837F"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -33,6 +33,7 @@
                 android:text="from amy of the options below" />
 
             <LinearLayout
+                android:id="@+id/linear_addGallery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -69,6 +70,7 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/img_addGallery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -84,6 +86,7 @@
 
 
             <LinearLayout
+                android:id="@+id/linear_addCamera"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -120,6 +123,7 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/img_addCamera"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

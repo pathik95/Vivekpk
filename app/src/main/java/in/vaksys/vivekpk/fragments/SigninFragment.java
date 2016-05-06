@@ -1,5 +1,6 @@
 package in.vaksys.vivekpk.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
@@ -20,6 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import in.vaksys.vivekpk.R;
+import in.vaksys.vivekpk.activities.HomeActivity;
 import in.vaksys.vivekpk.extras.Validator;
 
 /**
@@ -66,6 +68,7 @@ public class SigninFragment extends Fragment {
         formParams.put("password", etPassword.getText().toString());
 
         if (isFromParamValid(formParams)) {
+            startActivity(new Intent(getActivity(), HomeActivity.class));
             Toast.makeText(getActivity(), "Sign in", Toast.LENGTH_SHORT).show();
         }
     }

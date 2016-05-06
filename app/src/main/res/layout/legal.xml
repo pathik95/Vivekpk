@@ -28,6 +28,7 @@
             android:paddingLeft="10dp">
 
             <LinearLayout
+                android:id="@+id/linear_copyright"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -60,6 +61,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_termCondition"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -92,6 +94,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_privatePolicy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -124,6 +127,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
+                android:id="@+id/linear_desclaimer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"

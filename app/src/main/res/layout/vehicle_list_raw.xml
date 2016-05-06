@@ -32,10 +32,11 @@
                     android:layout_weight="1"
                     android:text="Vehicle Details"
                     android:textColor="#83837F"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <ImageView
+                    android:id="@+id/img_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|right"
@@ -66,6 +67,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_detailVehicelNumber"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -97,6 +99,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_detailVehicelBranch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -128,6 +131,7 @@
                         android:textStyle="bold" />
 
                     <TextView
+                        android:id="@+id/tv_detailVehicelModel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -152,7 +156,7 @@
                 android:layout_marginTop="10dp"
                 android:text="Vehicle Documents"
                 android:textColor="#83837F"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
 
@@ -163,6 +167,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
+                    android:id="@+id/linear_vehicelDocRcBook"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -197,6 +202,7 @@
                             android:text="( " />
 
                         <TextView
+                            android:id="@+id/tv_rcBookCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="6"
@@ -213,6 +219,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linear_vehicelDocInsurance"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -253,6 +260,7 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/tv_inssuranceCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=" )" />
@@ -263,6 +271,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linear_vehicelDocEmission"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -298,6 +307,7 @@
                             android:text="( " />
 
                         <TextView
+                            android:id="@+id/tv_emissionCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="6"
@@ -314,6 +324,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/linear_vehicelDocBills"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -348,6 +359,7 @@
                             android:text="( " />
 
                         <TextView
+                            android:id="@+id/tv_billsCount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="6"
