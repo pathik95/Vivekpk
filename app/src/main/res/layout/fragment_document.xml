@@ -9,11 +9,18 @@
         android:orientation="vertical"
         tools:context=".fragments.DocumentFragment">
 
+
         <include layout="@layout/add_driving_license" />
 
         <include layout="@layout/your_driving_license" />
 
         <include layout="@layout/register_vehicle" />
+
+        <include layout="@layout/vehicle_details" />
+
+        <include layout="@layout/enter_car_details" />
+
+        <include layout="@layout/vehicle_list_raw" />
 
 
     </LinearLayout>

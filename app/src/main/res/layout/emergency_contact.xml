@@ -144,7 +144,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Vineet Kumar"
                                 android:textColor="#A9A6A0"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -154,7 +154,7 @@
                                 android:layout_marginTop="3dp"
                                 android:text="6856458765"
                                 android:textColor="#A9A6A0"
-                                android:textSize="16sp"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
 
@@ -226,7 +226,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="Vineet Kumar"
                                 android:textColor="#A9A6A0"
-                                android:textSize="18sp"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -236,7 +236,7 @@
                                 android:layout_marginTop="3dp"
                                 android:text="6856458765"
                                 android:textColor="#A9A6A0"
-                                android:textSize="16sp"
+                                android:textSize="14sp"
                                 android:textStyle="bold" />
                         </LinearLayout>
 

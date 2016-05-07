@@ -2,14 +2,19 @@ package in.vaksys.vivekpk.fragments;
 
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -31,6 +36,9 @@ public class ServiceFragment extends Fragment {
     private SimpleDateFormat dateFormatter;
     private String SelectedDate;
     public static final String TAG = "DATE";
+    private LinearLayout linearVehicle, linearAddVehicle, linearServiceDueDate;
+    private Button btn_addVehicle, btn_setAlert;
+
 
     public ServiceFragment() {
         // Required empty public constructor
@@ -62,6 +70,42 @@ public class ServiceFragment extends Fragment {
                 return true;
             }
 */
+        });
+
+        linearVehicle = (LinearLayout) rootView.findViewById(R.id.linearVehicleDetails);
+        linearServiceDueDate = (LinearLayout) rootView.findViewById(R.id.linearServiceDueDate);
+        linearAddVehicle = (LinearLayout) rootView.findViewById(R.id.linearAddVehicle);
+
+        btn_addVehicle = (Button) rootView.findViewById(R.id.btn_addVehicle);
+        btn_setAlert = (Button) rootView.findViewById(R.id.btn_setAlert);
+
+        btn_addVehicle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearVehicle.setVisibility(View.VISIBLE);
+                linearAddVehicle.setVisibility(View.GONE);
+                linearServiceDueDate.setVisibility(View.VISIBLE);
+            }
+        });
+
+        btn_setAlert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.remind_me);
+
+                Button btn_done = (Button) dialog.findViewById(R.id.btn_done);
+                btn_done.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        Toast.makeText(getActivity(), "Reminder Set", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                dialog.show();
+            }
         });
 
         return rootView;

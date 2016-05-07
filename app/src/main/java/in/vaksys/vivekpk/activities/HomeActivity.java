@@ -1,10 +1,16 @@
 package in.vaksys.vivekpk.activities;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
@@ -13,15 +19,18 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import java.util.ArrayList;
 
 import in.vaksys.vivekpk.R;
+import in.vaksys.vivekpk.fragments.EmergencyFragment;
 import in.vaksys.vivekpk.fragments.MainTabFragment;
 import in.vaksys.vivekpk.fragments.ReminderTabFragment;
 import in.vaksys.vivekpk.fragments.DocumentFragment;
+
 
 public class HomeActivity extends AppCompatActivity {
 
     private MainTabFragment currentFragment;
     private DocumentFragment documentFragment;
     private ReminderTabFragment reminderTabFragment;
+    private EmergencyFragment emergencyFragment;
     private ArrayList<AHBottomNavigationItem> bottomNavigationItems = new ArrayList<>();
     private FragmentManager fragmentManager;
     private AHBottomNavigation bottomNavigation;
@@ -86,9 +95,9 @@ public class HomeActivity extends AppCompatActivity {
                             .commit();
                 }
                 if (position == 3) {
-                    reminderTabFragment = ReminderTabFragment.newInstance(0);
+                    emergencyFragment = EmergencyFragment.newInstance(0);
                     fragmentManager.beginTransaction()
-                            .replace(R.id.fragment_container, reminderTabFragment)
+                            .replace(R.id.fragment_container, emergencyFragment)
                             .commit();
                 }
 
@@ -132,6 +141,31 @@ public class HomeActivity extends AppCompatActivity {
 
     public int getBottomNavigationNbItems() {
         return bottomNavigation.getItemsCount();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    /**
+     * Event Handling for Individual menu item selected
+     * Identify single menu item by it's id
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.account:
+
+                return true;
+
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

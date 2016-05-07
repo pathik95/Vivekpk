@@ -19,7 +19,13 @@
 
         <include layout="@layout/add_vehicle_details" />
 
+        <include layout="@layout/vehicle" />
+
         <include layout="@layout/insurance_policy" />
+
+        <include layout="@layout/insurance_policy_with_vihicle" />
+
+        <include layout="@layout/insurance_details" />
 
     </LinearLayout>
 

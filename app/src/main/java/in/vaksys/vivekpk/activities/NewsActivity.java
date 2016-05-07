@@ -26,7 +26,7 @@ public class NewsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
 
-        tv = (TextView) findViewById(R.id.tv);
+        tv = (TextView) findViewById(R.id.tv_data);
         makeTextViewResizable(tv, 3, "View More", true);
     }
 
