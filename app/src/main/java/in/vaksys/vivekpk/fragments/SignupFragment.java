@@ -1,31 +1,29 @@
 package in.vaksys.vivekpk.fragments;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-
-import android.support.v7.app.AlertDialog;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.maksim88.passwordedittext.PasswordEditText;
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import in.vaksys.vivekpk.R;
 import in.vaksys.vivekpk.activities.VerifyOtpActivity;
 import in.vaksys.vivekpk.adapter.CountryCodeAdapter;
@@ -36,12 +34,24 @@ import in.vaksys.vivekpk.pojo.Country;
  */
 public class SignupFragment extends Fragment {
 
-    EditText etCountryCode;
-    private Button btnContinue;
+    @Bind(R.id.et_firstName)
+    EditText etFirstName;
+    @Bind(R.id.et_lasttName)
+    EditText etLasttName;
+    @Bind(R.id.et_emailId)
+    EditText etEmailId;
+    @Bind(R.id.et_code_signup)
+    EditText etCode;
+    @Bind(R.id.et_contactNo)
+    EditText etContactNo;
+    @Bind(R.id.et_password)
+    PasswordEditText etPassword;
+    @Bind(R.id.btn_continue)
+    Button btnContinue;
     private String[] code = {"(+36)", "(+354)", "(+91)", "(+62)", "(+62)",
             "(+98)", "(+98)", "(+964)"};
 
-    private String[] countryName = {"Hungary", "(Iceland", "India", "Indonesia", "Iran",
+    private String[] countryName = {"Hungary", "Iceland", "India", "Indonesia", "Iran",
             "Iran", "Iran", "Iran"};
 
     CountryCodeAdapter adapter;
@@ -55,12 +65,9 @@ public class SignupFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_signup, container, false);
+        ButterKnife.bind(this, rootView);
 
-        etCountryCode = (EditText) rootView.findViewById(R.id.et_code);
-
-        btnContinue = (Button) rootView.findViewById(R.id.btn_continue);
-
-        etCountryCode.setOnClickListener(new View.OnClickListener() {
+        etCode.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ShowAlertDialogWithListview();
@@ -70,6 +77,7 @@ public class SignupFragment extends Fragment {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                submitForm();
                 final Dialog confirm = new Dialog(getActivity());
                 confirm.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 confirm.setContentView(R.layout.confirm_dialog);
@@ -140,9 +148,121 @@ public class SignupFragment extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                etCountryCode.setText(parent.getSelectedItem().toString());
+                etCode.setText(parent.getSelectedItem().toString());
             }
         });
         dialog.show();
+    }
+
+    private void submitForm() {
+        if (!validateFirstName()) {
+            return;
+        }
+        if (!validateLastName()) {
+            return;
+        }
+        if (!validateEmail()) {
+            return;
+        }
+        if (!validateCode()) {
+            return;
+        }
+        if (!validateNumber()) {
+            return;
+        }
+        if (!validatePassword()) {
+            return;
+        }
+        /*getData();
+        uploadData();*/
+    }
+
+    private void requestFocus(View view) {
+        if (view.requestFocus()) {
+            getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+        }
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
+    }
+
+    private boolean validateFirstName() {
+        if (etFirstName.getText().toString().trim().isEmpty()) {
+            etFirstName.setError(getString(R.string.err_msg_first_name));
+            requestFocus(etFirstName);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private boolean validateLastName() {
+        if (etLasttName.getText().toString().trim().isEmpty()) {
+            etLasttName.setError(getString(R.string.err_msg_last_name));
+            requestFocus(etLasttName);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private boolean validateEmail() {
+        String email = etEmailId.getText().toString().trim();
+
+        if (email.isEmpty() || !isValidEmail(email)) {
+            etEmailId.setError(getString(R.string.err_msg_email));
+            requestFocus(etEmailId);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private boolean validateCode() {
+
+        if (etCode.getText().toString().trim().isEmpty()) {
+            etCode.setError(getString(R.string.err_msg_code));
+            requestFocus(etCode);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private static boolean isValidEmail(String email) {
+        return !TextUtils.isEmpty(email) && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+
+    private boolean validateNumber() {
+        if (etContactNo.getText().toString().trim().isEmpty()) {
+            etContactNo.setError(getString(R.string.err_msg_number));
+            requestFocus(etContactNo);
+            return false;
+        }
+        if (etContactNo.length() != 10) {
+            etContactNo.setError(getString(R.string.err_msg_valid_number));
+            requestFocus(etContactNo);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private boolean validatePassword() {
+        if (etPassword.getText().toString().trim().isEmpty()) {
+            etPassword.setError(getString(R.string.err_msg_password));
+            requestFocus(etPassword);
+            return false;
+        }
+        if (etPassword.length() < 6) {
+            etPassword.setError(getString(R.string.err_valid_password));
+            requestFocus(etPassword);
+            return false;
+        } else {
+            return true;
+        }
     }
 }
