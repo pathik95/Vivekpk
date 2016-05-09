@@ -9,7 +9,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -41,7 +40,7 @@
         android:id="@+id/et_emailId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:hint="Email ID"
         android:singleLine="true"
         android:textColor="#000000"
@@ -50,7 +49,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <EditText
@@ -79,7 +78,7 @@
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:hint="Password"
         android:inputType="textPassword"
         android:singleLine="true"
@@ -92,18 +91,9 @@
         android:id="@+id/btn_continue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:text="Continue" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="By signing in you agree to our terms and condition."
-        android:textColor="#797979"
-        android:textSize="12sp" />
 
 </LinearLayout>

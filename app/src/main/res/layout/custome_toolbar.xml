@@ -7,9 +7,34 @@
     android:background="@color/colorPrimary"
     android:elevation="4dp">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/click_logo"/>
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/click_logo" />
+
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img_search"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/img_search"
+            android:layout_toStartOf="@+id/img_search"
+            android:src="@drawable/notification_nav" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/search_nav_menus" />
+
+    </RelativeLayout>
 </android.support.v7.widget.Toolbar>

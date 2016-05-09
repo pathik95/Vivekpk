@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="#E7E4E2"
+    android:background="@drawable/dialog_shape"
     android:gravity="center"
     android:orientation="vertical">
 
     <LinearLayout
+        android:layout_marginLeft="8dp"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="20dp"
         app:layout_widthPercent="100%">
 
         <TextView
@@ -70,7 +70,7 @@
             android:textStyle="bold" />
 
         <View
-            android:layout_width="2dp"
+            android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#929091" />
 

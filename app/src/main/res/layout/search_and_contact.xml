@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_contactSearch"
+    android:visibility="visible"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -49,7 +51,7 @@
             </LinearLayout>
 
 
-            <Button
+            <!--<Button
                 android:id="@+id/btn_search"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,7 +63,13 @@
                 android:background="@color/colorPrimary"
                 android:text="Search"
                 android:textAllCaps="false"
-                android:textStyle="bold" />
+                android:textStyle="bold" />-->
+
+            <ListView
+                android:id="@+id/lv_searchContact"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"></ListView>
 
 
         </LinearLayout>

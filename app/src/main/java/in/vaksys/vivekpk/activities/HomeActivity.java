@@ -1,6 +1,7 @@
 package in.vaksys.vivekpk.activities;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -10,7 +11,9 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
@@ -35,12 +38,29 @@ public class HomeActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private AHBottomNavigation bottomNavigation;
     private Toolbar toolbar;
+    ImageView img, notification;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         fragmentManager = getSupportFragmentManager();
+
+        notification = (ImageView) findViewById(R.id.notification);
+        notification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, NotificationActivity.class));
+            }
+        });
+
+        img = (ImageView) findViewById(R.id.img_search);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, SearchActivity.class));
+            }
+        });
 
         initUI();
     }

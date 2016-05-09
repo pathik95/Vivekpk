@@ -70,15 +70,15 @@ public class InsuranceFragment extends Fragment {
 
         spInsuranceCompany = (Spinner) rootView.findViewById(R.id.sp_insuranceCompany);
 
-        List<String> CompanyName = new ArrayList<String>();
-        CompanyName.add("Select Company");
-        CompanyName.add("Business Services");
-        CompanyName.add("Computers");
-        CompanyName.add("Education");
-        CompanyName.add("Personal");
-        CompanyName.add("Travel");
+        List<String> insuranse = new ArrayList<String>();
+        insuranse.add("Select Company");
+        insuranse.add("Business Services");
+        insuranse.add("Computers");
+        insuranse.add("Education");
+        insuranse.add("Personal");
+        insuranse.add("Travel");
 
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, CompanyName);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, insuranse);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

@@ -27,14 +27,14 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="8dp"
             android:src="@drawable/ic_action_name1" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:background="#E7E4E2"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/colorPrimary"
@@ -52,6 +52,17 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="By signing in you agree to our terms and condition."
+        android:textColor="#a39f9a"
+        android:textSize="12sp" />
 
 
 </FrameLayout>
