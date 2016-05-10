@@ -20,6 +20,9 @@
             android:name=".activities.VerifyOtpActivity"
             android:label="" />
         <activity android:name=".activities.HomeActivity" />
+        <activity android:name=".activities.NewsActivity" />
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.NotificationActivity"></activity>
     </application>
 
 </manifest>
