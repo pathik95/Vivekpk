@@ -11,4 +11,12 @@
     <string name="copyright_text">Daddys road respects the intellectual property rights of others and expects its users to do the same.\n\nIt is daddysroad policy in appropriate circumstances and at its discreation to disable and or terminate the accounts of users who repetedly infinge or are repeatedly charged with infinging the copyrights or other intellectual property rights of other.
     </string>
     <string name="password_reset_info">To reset your password, visit the link below and enter your email address or mobile number.\n\nWithin a few minutes, you should receive an email inviting you to reset your password.\n\nFor security reasons, you should choose a unique password for daddysroad and never share your password in any correnspondence.\n\nIf you continue to have trouble accessing your account, please <b>write to us</b>\n</string>
+    <string name="err_msg_first_name">Provide First Name</string>
+    <string name="err_msg_last_name">Provide Last Name</string>
+    <string name="err_msg_email">Provide Valid Email Id</string>
+    <string name="err_msg_code">Provide Country Code</string>
+    <string name="err_msg_number">Provide Contact Number</string>
+    <string name="err_msg_valid_number">Phone Number Must Contain 10 Digits</string>
+    <string name="err_msg_password">Provide Password</string>
+    <string name="err_valid_password">Password Must Contain 6 Characters</string>
 </resources>
