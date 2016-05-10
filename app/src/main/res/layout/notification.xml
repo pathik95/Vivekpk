@@ -138,8 +138,8 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
                 android:background="#ccc" />
 
             <LinearLayout
@@ -235,7 +235,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:background="#CCC" />
 
@@ -331,7 +331,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:background="#CCC" />
 

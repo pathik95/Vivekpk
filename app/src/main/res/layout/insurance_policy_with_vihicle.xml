@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp"
-    android:visibility="gone">
+    android:visibility="visible">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Register Number"
+                        android:text="Number"
                         android:textColor="#C6C4C5"
                         android:textSize="12sp"
                         android:textStyle="bold" />
@@ -72,15 +72,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:text="KA-05j-95959"
+                        android:layout_marginTop="8dp"
+                        android:text="KA05j95959"
                         android:textColor="#83837F" />
 
                 </LinearLayout>
 
                 <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
                     android:background="#929091" />
 
                 <LinearLayout
@@ -104,15 +105,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="8dp"
                         android:text="Jaguar"
                         android:textColor="#83837F" />
 
                 </LinearLayout>
 
                 <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
                     android:background="#929091" />
 
                 <LinearLayout
@@ -136,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="8dp"
                         android:text="Sedan"
                         android:textColor="#83837F" />
 
@@ -265,7 +267,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="8dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
+                        android:background="@drawable/btn_yellow_border_shape"
                         android:text="set alert" />
 
                 </LinearLayout>

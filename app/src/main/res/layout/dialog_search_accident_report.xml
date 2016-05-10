@@ -26,7 +26,7 @@
             android:id="@+id/tv_accidentVehicalNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="KA04MB1556"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="8dp"
             android:text="Report the accident to vehicle user saved emergency contacts."
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -63,7 +63,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <Button
@@ -71,7 +71,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/btn_yellow_border_shape"
             android:text="Cancel"
             android:textAllCaps="false"
             android:textSize="15sp"
@@ -87,7 +87,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
+            android:background="@drawable/btn_yellow_border_shape"
             android:text="Send"
             android:textAllCaps="false"
             android:textSize="15sp"

@@ -23,19 +23,19 @@
             android:layout_height="wrap_content"
             android:text="Photo 1"
             android:textColor="#000000"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
             android:background="#C6C4C5" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="8dp"
             android:gravity="right"
             android:orientation="horizontal">
 
@@ -47,7 +47,7 @@
                 android:layout_weight="2"
                 android:text="Replace"
                 android:textColor="#ADAAA5"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -65,7 +65,7 @@
                 android:layout_weight="2"
                 android:text="Delete"
                 android:textColor="#ADAAA5"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:textStyle="bold" />
 
             <ImageView

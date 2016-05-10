@@ -1,60 +1,72 @@
 package in.vaksys.vivekpk.fragments;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
-import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 
 import in.vaksys.vivekpk.R;
 import in.vaksys.vivekpk.activities.VerifyOtpActivity;
-import in.vaksys.vivekpk.adapter.CountryCodeAdapter;
-import in.vaksys.vivekpk.pojo.Country;
+import in.vaksys.vivekpk.adapter.ListViewAdapter;
+import in.vaksys.vivekpk.extras.AdapterCallback;
+import in.vaksys.vivekpk.extras.MyApplication;
+import in.vaksys.vivekpk.pojo.Coutrycode;
 
 /**
  * Created by dell980 on 5/2/2016.
  */
-public class SignupFragment extends Fragment {
+public class SignupFragment extends Fragment implements AdapterCallback {
 
     EditText etCountryCode;
     private Button btnContinue;
-    private String[] code = {"(+36)", "(+354)", "(+91)", "(+62)", "(+62)",
+    /*private String[] code = {"(+36)", "(+354)", "(+91)", "(+62)", "(+62)",
             "(+98)", "(+98)", "(+964)"};
 
-    private String[] countryName = {"Hungary", "(Iceland", "India", "Indonesia", "Iran",
+    private String[] countryName = {"Hungary", "Iceland", "India", "Indonesia", "Iran",
             "Iran", "Iran", "Iran"};
 
     CountryCodeAdapter adapter;
     ArrayList<Country> arraylist = new ArrayList<Country>();
 
     ListView list;
-    EditText editsearch;
+    EditText editsearch;*/
     Dialog dialog;
+
+    ListView list;
+    ListViewAdapter adapter;
+    EditText editsearch;
+    String[] code;
+    String[] countryName;
+    ArrayList<Coutrycode> arraylist = new ArrayList<Coutrycode>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_signup, container, false);
+
+        dialog = new Dialog(getContext());
+
+        code = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+
+        countryName = new String[]{"China", "India", "United States",
+                "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh",
+                "Russia", "Japan"};
 
         etCountryCode = (EditText) rootView.findViewById(R.id.et_code);
 
@@ -93,19 +105,20 @@ public class SignupFragment extends Fragment {
 
 
     public void ShowAlertDialogWithListview() {
-        dialog = new Dialog(getActivity());
+        dialog.setTitle("Choose country Code");
         dialog.setContentView(R.layout.country_list);
+
 
         list = (ListView) dialog.findViewById(R.id.list);
 
-        for (int i = 0; i < code.length; i++) {
-            Country wp = new Country(code[i], countryName[i]);
+        for (int i = 0; i < countryName.length; i++) {
+            Coutrycode wp = new Coutrycode(code[i], countryName[i]);
             // Binds all strings into an array
             arraylist.add(wp);
         }
 
         // Pass results to ListViewAdapter Class
-        adapter = new CountryCodeAdapter(getActivity(), arraylist);
+        adapter = new ListViewAdapter(this, arraylist);
 
         // Binds the Adapter to the ListView
         list.setAdapter(adapter);
@@ -121,7 +134,6 @@ public class SignupFragment extends Fragment {
                 // TODO Auto-generated method stub
                 String text = editsearch.getText().toString().toLowerCase(Locale.getDefault());
                 adapter.filter(text);
-
             }
 
             @Override
@@ -137,12 +149,15 @@ public class SignupFragment extends Fragment {
             }
         });
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                etCountryCode.setText(parent.getSelectedItem().toString());
-            }
-        });
         dialog.show();
+    }
+
+
+    @Override
+    public void onMethodCallback() {
+        dialog.dismiss();
+        SharedPreferences sharedPreferences = MyApplication.getInstance().getSharedPreferences("harsh", Context.MODE_PRIVATE);
+        //Toast.makeText(MyApplication.getInstance(), "yeyyyyy" + sharedPreferences.getString("value", "fuck"), Toast.LENGTH_LONG).show();
+        etCountryCode.setText(sharedPreferences.getString("value", ""));
     }
 }

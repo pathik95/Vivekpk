@@ -41,7 +41,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/emergency_contact" />
+                    android:src="@drawable/emergency_emergency_contact" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -55,7 +55,7 @@
                         android:padding="5dp"
                         android:text="In case of emergency / accident, other can alert about your situation to the emergency contacts."
                         android:textColor="#B9B7B3"
-                        android:textSize="11sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -64,7 +64,7 @@
                         android:padding="5dp"
                         android:text="Add your emergency contacts."
                         android:textColor="#B9B7B3"
-                        android:textSize="11sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -73,7 +73,7 @@
                         android:padding="5dp"
                         android:text="Currently you can add upto 2 contacts"
                         android:textColor="#B9B7B3"
-                        android:textSize="11sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -82,7 +82,7 @@
                         android:padding="5dp"
                         android:text="Add only mobile number"
                         android:textColor="#B9B7B3"
-                        android:textSize="11sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -91,6 +91,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 android:visibility="visible">
 
