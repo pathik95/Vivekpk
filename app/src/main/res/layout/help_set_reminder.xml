@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
-        android:text="Help Center"
+        android:text="Set Reminder"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -27,8 +27,9 @@
             android:orientation="vertical"
             android:paddingLeft="10dp">
 
+
             <LinearLayout
-                android:id="@+id/linear_aboutUs"
+                android:id="@+id/linear_reminder_insurance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -42,9 +43,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="About Us"
+                    android:text="Insurance reminder"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -61,7 +63,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
-                android:id="@+id/linear_help_helpCenter"
+                android:id="@+id/linear_reminder_emission"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -75,9 +77,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="Help"
+                    android:text="Emission reminder"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="0dp"
@@ -94,7 +97,7 @@
                 android:background="#CCC" />
 
             <LinearLayout
-                android:id="@+id/linear_legal"
+                android:id="@+id/linear_reminder_service"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -108,42 +111,10 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="4"
-                    android:text="Legal"
+                    android:text="Service reminder"
                     android:textColor="#7F7F7F"
-                    android:textSize="12sp" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:src="@drawable/right_arrow_for_menu" />
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#CCC" />
-
-            <LinearLayout
-                android:id="@+id/linear_contactUs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="4"
-                    android:text="Contact Us"
-                    android:textColor="#7F7F7F"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
                 <ImageView
                     android:layout_width="0dp"

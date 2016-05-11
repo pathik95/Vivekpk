@@ -35,17 +35,6 @@ public class SignupFragment extends Fragment implements AdapterCallback {
 
     EditText etCountryCode;
     private Button btnContinue;
-    /*private String[] code = {"(+36)", "(+354)", "(+91)", "(+62)", "(+62)",
-            "(+98)", "(+98)", "(+964)"};
-
-    private String[] countryName = {"Hungary", "Iceland", "India", "Indonesia", "Iran",
-            "Iran", "Iran", "Iran"};
-
-    CountryCodeAdapter adapter;
-    ArrayList<Country> arraylist = new ArrayList<Country>();
-
-    ListView list;
-    EditText editsearch;*/
     Dialog dialog;
 
     ListView list;
@@ -68,7 +57,7 @@ public class SignupFragment extends Fragment implements AdapterCallback {
                 "Indonesia", "Brazil", "Pakistan", "Nigeria", "Bangladesh",
                 "Russia", "Japan"};
 
-        etCountryCode = (EditText) rootView.findViewById(R.id.et_code);
+        etCountryCode = (EditText) rootView.findViewById(R.id.et_code_signup);
 
         btnContinue = (Button) rootView.findViewById(R.id.btn_continue);
 

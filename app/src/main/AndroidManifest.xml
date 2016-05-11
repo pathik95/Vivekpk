@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="in.vaksys.vivekpk">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".extras.MyApplication"
         android:allowBackup="true"
@@ -22,7 +24,8 @@
         <activity android:name=".activities.HomeActivity" />
         <activity android:name=".activities.NewsActivity" />
         <activity android:name=".activities.SearchActivity" />
-        <activity android:name=".activities.NotificationActivity"></activity>
+        <activity android:name=".activities.NotificationActivity" />
+        <activity android:name=".activities.WebViewActivity"></activity>
     </application>
 
 </manifest>

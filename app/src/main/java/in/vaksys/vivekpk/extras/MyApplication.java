@@ -17,6 +17,16 @@ public class MyApplication extends Application {
     private static MyApplication mInstance;
     private RequestQueue mRequestQueue;
 
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    int value;
+
     @Override
     public void onCreate() {
         super.onCreate();

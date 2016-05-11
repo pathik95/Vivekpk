@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="12dp"
-    android:visibility="visible">
+    android:visibility="gone">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
 
                 <View
                     android:layout_width="1dp"
-                    android:layout_height="30dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center"
                     android:background="#929091" />
 
@@ -113,7 +113,7 @@
 
                 <View
                     android:layout_width="1dp"
-                    android:layout_height="30dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center"
                     android:background="#929091" />
 

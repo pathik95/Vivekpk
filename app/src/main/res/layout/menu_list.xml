@@ -4,14 +4,12 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="right|end"
-    android:background="@android:color/white"
+    android:background="@drawable/dialog_shape"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -24,11 +22,25 @@
                 android:id="@+id/myAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="5dp"
                 android:drawableLeft="@drawable/account"
                 android:drawablePadding="24dp"
                 android:gravity="center_vertical"
                 android:text="My Account"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#a39f9a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#CCC" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -41,71 +53,135 @@
                 android:id="@+id/news"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
                 android:drawableLeft="@drawable/news"
                 android:drawablePadding="24dp"
                 android:gravity="left"
                 android:text="News"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#a39f9a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#CCC" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:gravity="left|center"
             android:orientation="vertical">
-        <TextView
-            android:id="@+id/inviteFriends"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/invitefriends"
-            android:drawablePadding="24dp"
-            android:gravity="center_vertical"
-            android:text="Invite Friend"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-            </LinearLayout>
-            <LinearLayout
+
+            <TextView
+                android:id="@+id/inviteFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:drawableLeft="@drawable/invitefriends"
+                android:drawablePadding="24dp"
+                android:gravity="center_vertical"
+                android:text="Invite Friend"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#a39f9a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:gravity="left|center"
-                android:orientation="vertical">
-        <TextView
-            android:id="@+id/rateTheApp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ratings"
-            android:drawablePadding="24dp"
-            android:gravity="center_vertical"
-            android:text="Rate The App"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:gravity="left|center"
-                    android:orientation="vertical">
-        <TextView
-            android:id="@+id/helpCenter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/help"
-            android:drawablePadding="24dp"
-            android:gravity="center_vertical"
-            android:text="Help Center"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:gravity="left|center"
-                        android:orientation="vertical">
-        <TextView
-            android:id="@+id/referralCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/referralcode"
-            android:drawablePadding="24dp"
-            android:gravity="center_vertical"
-            android:text="Referral Code"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-</LinearLayout>
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#CCC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rateTheApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:drawableLeft="@drawable/ratings"
+                android:drawablePadding="24dp"
+                android:gravity="center_vertical"
+                android:text="Rate The App"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#a39f9a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#CCC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_help_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/helpCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:drawableLeft="@drawable/help"
+                android:drawablePadding="24dp"
+                android:gravity="center_vertical"
+                android:text="Help Center"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#a39f9a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="#CCC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/referralCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:drawableLeft="@drawable/referralcode"
+                android:drawablePadding="24dp"
+                android:gravity="center_vertical"
+                android:text="Referral Code"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#a39f9a"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

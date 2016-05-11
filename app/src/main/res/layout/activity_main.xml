@@ -60,7 +60,7 @@
         android:layout_marginBottom="40dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="By signing in you agree to our terms and condition."
+        android:text="By signing in you agree to our T &amp; C"
         android:textColor="#a39f9a"
         android:textSize="12sp" />
 

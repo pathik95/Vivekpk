@@ -6,7 +6,9 @@
     android:orientation="vertical"
     tools:context="in.vaksys.vivekpk.activities.NotificationActivity">
 
-    <include layout="@layout/custome_toolbar" />
+    <include
+        android:id="@+id/toolbar1"
+        layout="@layout/custom_toolbar" />
 
     <include layout="@layout/notification" />
 

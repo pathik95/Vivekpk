@@ -8,8 +8,8 @@
     tools:context="in.vaksys.vivekpk.activities.SearchActivity">
 
     <include
-        android:id="@+id/toolbar"
-        layout="@layout/custome_toolbar" />
+        android:id="@+id/toolbar1"
+        layout="@layout/custom_toolbar" />
 
     <include layout="@layout/search_and_contact" />
 

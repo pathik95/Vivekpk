@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -38,15 +42,15 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar1);
 
-        imageView = (ImageView) findViewById(R.id.img_search);
+        /*imageView = (ImageView) findViewById(R.id.img_search);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SearchActivity.this, SearchActivity.class));
             }
-        });
+        });*/
 
         // Listview Data
         String products[] = {"k0059745", "k0edf745", "sadfdf745", "ktrsf745", "av0890e745",
@@ -169,5 +173,50 @@ public class SearchActivity extends AppCompatActivity {
         linearVehicleDetails.setVisibility(View.GONE);
         linear_reasonContact.setVisibility(View.GONE);
         linear_searchInvite.setVisibility(View.GONE);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = new MenuInflater(this);
+        menuInflater.inflate(R.menu.search_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.navSearchToolbar:
+                // Single menu item is selected do something
+                // Ex: launching new activity/screen or show alert message
+                final Dialog dialog = new Dialog(this);
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.getWindow().setGravity(Gravity.TOP | Gravity.END);
+                dialog.setContentView(R.layout.menu_list);
+
+                LinearLayout linearLayout = (LinearLayout) dialog.findViewById(R.id.linear_help_toolbar);
+                linearLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        startActivity(new Intent(SearchActivity.this, WebViewActivity.class));
+                    }
+                });
+
+
+                dialog.show();
+                return true;
+
+            case R.id.searchSearchToolbar:
+                startActivity(new Intent(SearchActivity.this, SearchActivity.class));
+                return true;
+
+            case R.id.notificationSearchToolbar:
+                startActivity(new Intent(SearchActivity.this, NotificationActivity.class));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
