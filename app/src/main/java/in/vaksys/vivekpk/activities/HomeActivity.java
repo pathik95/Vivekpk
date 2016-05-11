@@ -63,6 +63,14 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         fragmentManager = getSupportFragmentManager();
+        if (MyApplication.getInstance().getCurrentFragment()== null)
+        {
+            currentFragment = MainTabFragment.newInstance(0);
+            MyApplication.getInstance().setCurrentFragment(currentFragment);
+        }
+        else {
+            currentFragment=MyApplication.getInstance().getCurrentFragment();
+        }
 
       /*  try {
             this.spinnerCallback = ((SpinnerCallback) HomeActivity.this);
@@ -101,8 +109,9 @@ public class HomeActivity extends AppCompatActivity {
                     edit.apply();
                     spinnerCallback.onSpinnerCallBack();*/
 //                    MyApplication.getInstance().setValue(0);
-                    Fragment fm =fragmentManager.findFragmentByTag("harsh");
+                    //Fragment fm =fragmentManager.findFragmentByTag("harsh");
 
+                    currentFragment.onRefresh();
                     Log.e(TAG, "onItemSelected: called");
                 }
                 if (position == 1) {
@@ -112,7 +121,8 @@ public class HomeActivity extends AppCompatActivity {
                     spinnerCallback.onSpinnerCallBack();
 */
 //                    MyApplication.getInstance().setValue(1);
-                    MainTabFragment.newInstance(0).onRefresh1();
+                    currentFragment.onRefresh1();
+                //    MainTabFragment.newInstance(0).onRefresh1();
                     Log.e(TAG, "onItemSelected: called");
 
                 }
@@ -176,7 +186,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onTabSelected(int position, boolean wasSelected) {
                 Toast.makeText(HomeActivity.this, " " + position + " " + wasSelected, Toast.LENGTH_SHORT).show();
                 if (position == 0) {
-                    currentFragment = MainTabFragment.newInstance(0);
+
                     fragmentManager.beginTransaction()
                             .replace(R.id.fragment_container, currentFragment,"harsh")
                             .commit();

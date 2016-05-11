@@ -11,8 +11,19 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
+import in.vaksys.vivekpk.fragments.MainTabFragment;
+
 public class MyApplication extends Application {
     public static final String TAG = MyApplication.class.getSimpleName();
+    private MainTabFragment currentFragment=null;
+
+    public MainTabFragment getCurrentFragment() {
+        return currentFragment;
+    }
+
+    public void setCurrentFragment(MainTabFragment currentFragment) {
+        this.currentFragment = currentFragment;
+    }
 
     private static MyApplication mInstance;
     private RequestQueue mRequestQueue;
